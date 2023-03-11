@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="first commit&#10;add Stars, Pell, MultTable, Guess class">
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="second commit&#10;fixed class data type int to long">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Guess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework1/Guess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MultTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework1/MultTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework1/Pell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Stars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework1/Stars.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -41,11 +51,11 @@
 }</component>
   <component name="RunManager" selected="Application.Pell">
     <configuration name="Guess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Guess" />
+      <option name="MAIN_CLASS_NAME" value="org.example.homework1.Guess" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.homework1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -54,11 +64,11 @@
       </method>
     </configuration>
     <configuration name="MultTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.MultTable" />
+      <option name="MAIN_CLASS_NAME" value="org.example.homework1.MultTable" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.homework1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,11 +77,11 @@
       </method>
     </configuration>
     <configuration name="Pell" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Pell" />
+      <option name="MAIN_CLASS_NAME" value="org.example.homework1.Pell" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.homework1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,11 +90,11 @@
       </method>
     </configuration>
     <configuration name="Stars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Stars" />
+      <option name="MAIN_CLASS_NAME" value="org.example.homework1.Stars" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.homework1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,6 +120,8 @@
       <option name="presentableId" value="Default" />
       <updated>1678095928970</updated>
       <workItem from="1678095931867" duration="1098000" />
+      <workItem from="1678097508854" duration="335000" />
+      <workItem from="1678517911436" duration="1794000" />
     </task>
     <task id="LOCAL-00001" summary="first commit&#10;add Stars, Pell, MultTable, Guess class">
       <created>1678096448032</created>
@@ -118,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678096448032</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second commit&#10;fixed class data type int to long">
+      <created>1678097787388</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678097787388</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +156,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit&#10;add Stars, Pell, MultTable, Guess class" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit&#10;add Stars, Pell, MultTable, Guess class" />
+    <MESSAGE value="second commit&#10;fixed class data type int to long" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit&#10;fixed class data type int to long" />
   </component>
 </project>
