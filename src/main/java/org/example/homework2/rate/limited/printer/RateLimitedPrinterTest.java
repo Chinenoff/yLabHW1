@@ -1,4 +1,4 @@
-package org.example.homework2.rateLimitedPrinter;
+package org.example.homework2.rate.limited.printer;
 
 public class RateLimitedPrinterTest {
 

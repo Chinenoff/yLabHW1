@@ -1,4 +1,4 @@
-package org.example.homework2.snilsValidator;
+package org.example.homework2.snils.validator;
 
 public class SnilsValidatorTest {
 

@@ -1,4 +1,4 @@
-package org.example.homework2.statsAccumulator;
+package org.example.homework2.stats.accumulator;
 
 public interface StatsAccumulator {
 
