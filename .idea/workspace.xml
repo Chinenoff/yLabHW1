@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="first commit&#10;add Stars, Pell, MultTable, Guess class">
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="refactoring the structure of the project&#10;create branch featureHW2 and package homework2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/complexNumbers/ComplexNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/complexNumbers/ComplexTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/sequences/SequenceGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/sequences/SequenceGeneratorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/sequences/SequenceGeneratorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +20,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -39,13 +50,31 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Pell">
-    <configuration name="Guess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Guess" />
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.homework2.Sequences" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ComplexTest">
+    <configuration name="ComplexTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework2.complexNumbers.ComplexTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.homework2.complexNumbers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Guess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework1.Guess" />
+      <module name="yLabHW1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.homework1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -54,11 +83,11 @@
       </method>
     </configuration>
     <configuration name="MultTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.MultTable" />
+      <option name="MAIN_CLASS_NAME" value="org.example.homework1.MultTable" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.homework1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,11 +96,11 @@
       </method>
     </configuration>
     <configuration name="Pell" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Pell" />
+      <option name="MAIN_CLASS_NAME" value="org.example.homework1.Pell" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.homework1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Stars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Stars" />
+    <configuration name="SequenceGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework2.sequences.SequenceGeneratorTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.homework2.sequences.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,10 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ComplexTest" />
+        <item itemvalue="Application.SequenceGeneratorTest" />
         <item itemvalue="Application.Pell" />
         <item itemvalue="Application.Guess" />
         <item itemvalue="Application.MultTable" />
-        <item itemvalue="Application.Stars" />
       </list>
     </recent_temporary>
   </component>
@@ -110,6 +140,8 @@
       <option name="presentableId" value="Default" />
       <updated>1678095928970</updated>
       <workItem from="1678095931867" duration="1098000" />
+      <workItem from="1678097508854" duration="335000" />
+      <workItem from="1678517911436" duration="18944000" />
     </task>
     <task id="LOCAL-00001" summary="first commit&#10;add Stars, Pell, MultTable, Guess class">
       <created>1678096448032</created>
@@ -118,7 +150,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678096448032</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second commit&#10;fixed class data type int to long">
+      <created>1678097787388</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678097787388</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactoring the structure of the project&#10;create branch featureHW2 and package homework2">
+      <created>1678519953935</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678519953935</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +183,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit&#10;add Stars, Pell, MultTable, Guess class" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit&#10;add Stars, Pell, MultTable, Guess class" />
+    <MESSAGE value="second commit&#10;fixed class data type int to long" />
+    <MESSAGE value="refactoring the structure of the project&#10;create branch featureHW2 and package homework2" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring the structure of the project&#10;create branch featureHW2 and package homework2" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.homework1;
 
 public class MultTable {
     public static void main(String[] args) {
