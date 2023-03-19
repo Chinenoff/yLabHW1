@@ -1,7 +1,11 @@
 package org.example.homework3.dated.map;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
@@ -44,6 +48,17 @@ public class DatedMapImpl implements DatedMap {
 
   @Override
   public Date getKeyLastInsertionDate(String key) {
-    return new Date(datedMap.get(key).substring(0, 28));
+    if (datedMap.containsKey(key)){
+      String string = datedMap.get(key).substring(0, 28);
+      DateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss ZZZ yyyy", Locale.ENGLISH);
+      Date date;
+      try {
+        date = format.parse(string);
+      } catch (ParseException e) {
+        throw new RuntimeException(e);
+      }
+      return date ;
+    }
+    return null;
   }
 }
