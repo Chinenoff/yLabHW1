@@ -6,14 +6,13 @@ import org.example.homework3.password.validator.exception.WrongPasswordException
 public class PasswordValidator {
 
   private static final String SYMBOL_PATTERN = ".*[\\w]";
-  private static final String LENGHT_PATTERN = "(.{0,20})";
+  private static final String LENGHT_PATTERN = ".{0,20}";
 
 
   public static boolean checkAuthorizationInputParameters(String login, String password,
       String confirmPassword) {
 
     try {
-      boolean b = login.equals("");
       if (!login.matches(SYMBOL_PATTERN) & !login.equals("")) {
         throw new WrongLoginException("Логин содержит недопустимые символы ");
       } else if (!login.matches(LENGHT_PATTERN)) {
@@ -30,7 +29,7 @@ public class PasswordValidator {
       }
     } catch (WrongLoginException | WrongPasswordException e) {
       System.out.println("Caught the exception");
-      System.out.println(e);
+      System.out.println(e.getMessage());
       return false;
     }
     return true;
