@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="refactoring the structure of the project&#10;create branch featureHW2 and package homework2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/dated/map/DatedMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/dated/map/DatedMapImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/dated/map/DatedMapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/transliterator/CharMapCyrToLat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/transliterator/Transliterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/transliterator/TransliteratorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/transliterator/TransliteratorTest.java" afterDir="false" />
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task #2 DatedMap completed!">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParserImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/employeeCSV.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,19 +48,21 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/00_java/All_My_Project/thread_5_2_java_NIO",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.homework3.org.structure" />
       <recent name="org.example.homework3.dated.map" />
       <recent name="org.example.homework3.transliterator" />
       <recent name="org.example.homework2.Sequences" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DatedMapTest">
+  <component name="RunManager" selected="Application.OrgStructureParserTest">
     <configuration name="ComplexTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.homework2.complexNumbers.ComplexTest" />
       <module name="yLabHW1" />
@@ -89,12 +89,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Pell" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.homework1.Pell" />
+    <configuration name="OrgStructureParserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework3.org.structure.OrgStructureParserTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.homework1.*" />
+          <option name="PATTERN" value="org.example.homework3.org.structure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrgStructureParserTest" />
         <item itemvalue="Application.DatedMapTest" />
         <item itemvalue="Application.TransliteratorTest" />
         <item itemvalue="Application.ComplexTest" />
         <item itemvalue="Application.SequenceGeneratorTest" />
-        <item itemvalue="Application.Pell" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +171,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678519953935</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="task #1 Transliterator completed!">
+      <created>1679212029184</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679212029184</updated>
+    </task>
+    <task id="LOCAL-00005" summary="task #2 DatedMap completed!">
+      <created>1679222827936</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679222827936</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +206,8 @@
     <MESSAGE value="first commit&#10;add Stars, Pell, MultTable, Guess class" />
     <MESSAGE value="second commit&#10;fixed class data type int to long" />
     <MESSAGE value="refactoring the structure of the project&#10;create branch featureHW2 and package homework2" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring the structure of the project&#10;create branch featureHW2 and package homework2" />
+    <MESSAGE value="task #1 Transliterator completed!" />
+    <MESSAGE value="task #2 DatedMap completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="task #2 DatedMap completed!" />
   </component>
 </project>
