@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task #2 DatedMap completed!">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParserImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/employeeCSV.csv" afterDir="false" />
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task #3 Org Structure completed!">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/exception/WrongLoginException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/exception/WrongPasswordException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +61,7 @@
       <recent name="org.example.homework2.Sequences" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OrgStructureParserTest">
+  <component name="RunManager" selected="Application.PasswordValidatorTest">
     <configuration name="ComplexTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.homework2.complexNumbers.ComplexTest" />
       <module name="yLabHW1" />
@@ -102,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SequenceGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.homework2.sequences.SequenceGeneratorTest" />
+    <configuration name="PasswordValidatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework3.password.validator.PasswordValidatorTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.homework2.sequences.*" />
+          <option name="PATTERN" value="org.example.homework3.password.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PasswordValidatorTest" />
         <item itemvalue="Application.OrgStructureParserTest" />
         <item itemvalue="Application.DatedMapTest" />
         <item itemvalue="Application.TransliteratorTest" />
         <item itemvalue="Application.ComplexTest" />
-        <item itemvalue="Application.SequenceGeneratorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679222827936</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="task #3 Org Structure completed!">
+      <created>1679380771005</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679380771005</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +214,28 @@
     <MESSAGE value="refactoring the structure of the project&#10;create branch featureHW2 and package homework2" />
     <MESSAGE value="task #1 Transliterator completed!" />
     <MESSAGE value="task #2 DatedMap completed!" />
-    <option name="LAST_COMMIT_MESSAGE" value="task #2 DatedMap completed!" />
+    <MESSAGE value="task #3 Org Structure completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="task #3 Org Structure completed!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidator.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidator.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidator.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
