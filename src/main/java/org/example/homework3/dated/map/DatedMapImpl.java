@@ -12,7 +12,6 @@ import java.util.Set;
 public class DatedMapImpl implements DatedMap {
 
   public Map<String,String> datedMap = new HashMap<>();
-  // "EEE MMM dd HH:mm:ss zzz yyyy" - toString Data (28 number)
 
   @Override
   public void put(String key, String value) {

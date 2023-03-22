@@ -12,8 +12,8 @@ import java.util.List;
 
 public class Sorter {
 
-  private final static String OUTPUTFILE = "sortedfile.txt";
-  private final static int MEMORY = 50;
+  private static final  String OUTPUTFILE = "sortedfile.txt";
+  private static final int MEMORY = 50;
 
   private final int runNumber;
 

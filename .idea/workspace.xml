@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task #4 PasswordValidator completed!">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Generator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Sorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Validator.java" afterDir="false" />
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task #5 FileSort completed!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/dated/map/DatedMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/dated/map/DatedMapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sortedfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sortedfile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/dated/map/DatedMapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/dated/map/DatedMapImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Sorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +64,7 @@
       <recent name="org.example.homework2.Sequences" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.PasswordValidatorTest">
     <configuration name="DatedMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.homework3.dated.map.DatedMapTest" />
       <module name="yLabHW1" />
@@ -132,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PasswordValidatorTest" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.DatedMapTest" />
         <item itemvalue="Application.OrgStructureParserTest" />
         <item itemvalue="Application.TransliteratorTest" />
-        <item itemvalue="Application.PasswordValidatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679409939882</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="task #5 FileSort completed!">
+      <created>1679436486215</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679436486215</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +233,7 @@
     <MESSAGE value="task #2 DatedMap completed!" />
     <MESSAGE value="task #3 Org Structure completed!" />
     <MESSAGE value="task #4 PasswordValidator completed!" />
-    <option name="LAST_COMMIT_MESSAGE" value="task #4 PasswordValidator completed!" />
+    <MESSAGE value="task #5 FileSort completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="task #5 FileSort completed!" />
   </component>
 </project>

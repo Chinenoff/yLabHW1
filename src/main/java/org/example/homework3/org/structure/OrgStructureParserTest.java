@@ -15,7 +15,5 @@ public class OrgStructureParserTest {
     ) {
       System.out.println("Boss Subordinate: " + s.getPosition());
     }
-
   }
-
 }
