@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="refactoring the structure of the project&#10;create branch featureHW2 and package homework2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/complexNumbers/ComplexNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/complexNumbers/ComplexTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/sequences/SequenceGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/sequences/SequenceGeneratorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/homework2/sequences/SequenceGeneratorTest.java" afterDir="false" />
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task #5 FileSort completed!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sortedfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sortedfile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/dated/map/DatedMapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/dated/map/DatedMapImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Sorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/file/sort/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/org/structure/OrgStructureParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homework3/password/validator/PasswordValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,26 +44,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/00_java/All_Not_My_Project/ExternalMergeSort-master",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.homework3.org.structure" />
+      <recent name="org.example.homework3.dated.map" />
+      <recent name="org.example.homework3.transliterator" />
       <recent name="org.example.homework2.Sequences" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ComplexTest">
-    <configuration name="ComplexTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.homework2.complexNumbers.ComplexTest" />
+  <component name="RunManager" selected="Application.PasswordValidatorTest">
+    <configuration name="DatedMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework3.dated.map.DatedMapTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.homework2.complexNumbers.*" />
+          <option name="PATTERN" value="org.example.homework3.dated.map.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,12 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Guess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.homework1.Guess" />
+    <configuration name="OrgStructureParserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework3.org.structure.OrgStructureParserTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.homework1.*" />
+          <option name="PATTERN" value="org.example.homework3.org.structure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.homework1.MultTable" />
+    <configuration name="PasswordValidatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework3.password.validator.PasswordValidatorTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.homework1.*" />
+          <option name="PATTERN" value="org.example.homework3.password.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Pell" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.homework1.Pell" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework3.file.sort.Test" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.homework1.*" />
+          <option name="PATTERN" value="org.example.homework3.file.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SequenceGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.homework2.sequences.SequenceGeneratorTest" />
+    <configuration name="TransliteratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework3.transliterator.TransliteratorTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.homework2.sequences.*" />
+          <option name="PATTERN" value="org.example.homework3.transliterator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ComplexTest" />
-        <item itemvalue="Application.SequenceGeneratorTest" />
-        <item itemvalue="Application.Pell" />
-        <item itemvalue="Application.Guess" />
-        <item itemvalue="Application.MultTable" />
+        <item itemvalue="Application.PasswordValidatorTest" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.DatedMapTest" />
+        <item itemvalue="Application.OrgStructureParserTest" />
+        <item itemvalue="Application.TransliteratorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +173,42 @@
       <option name="project" value="LOCAL" />
       <updated>1678519953935</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="task #1 Transliterator completed!">
+      <created>1679212029184</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679212029184</updated>
+    </task>
+    <task id="LOCAL-00005" summary="task #2 DatedMap completed!">
+      <created>1679222827936</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679222827936</updated>
+    </task>
+    <task id="LOCAL-00006" summary="task #3 Org Structure completed!">
+      <created>1679380771005</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679380771005</updated>
+    </task>
+    <task id="LOCAL-00007" summary="task #4 PasswordValidator completed!">
+      <created>1679409939882</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679409939882</updated>
+    </task>
+    <task id="LOCAL-00008" summary="task #5 FileSort completed!">
+      <created>1679436486215</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679436486215</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +229,11 @@
     <MESSAGE value="first commit&#10;add Stars, Pell, MultTable, Guess class" />
     <MESSAGE value="second commit&#10;fixed class data type int to long" />
     <MESSAGE value="refactoring the structure of the project&#10;create branch featureHW2 and package homework2" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring the structure of the project&#10;create branch featureHW2 and package homework2" />
+    <MESSAGE value="task #1 Transliterator completed!" />
+    <MESSAGE value="task #2 DatedMap completed!" />
+    <MESSAGE value="task #3 Org Structure completed!" />
+    <MESSAGE value="task #4 PasswordValidator completed!" />
+    <MESSAGE value="task #5 FileSort completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="task #5 FileSort completed!" />
   </component>
 </project>
