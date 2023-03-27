@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="add lesson 4 package from ylab">
-      <change afterPath="$PROJECT_DIR$/film.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/film.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task #1 Movie Database completed!">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson04/persistentmap/PersistenceMapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson04/persistentmap/PersistentMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson04/persistentmap/PersistentMapImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/ApiApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/PersonApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/PersonApiImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/db/DbApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/filesort/FileSortImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/filesort/FileSorter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/filesort/FileSorterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/movie/MovieLoaderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson04/movie/MovieLoaderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/movie/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson04/movie/MovieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/persistentmap/PersistenceMapTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/persistentmap/PersistentMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/persistentmap/PersistentMapImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +44,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/00_java/All_My_Project/yLabHW1",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "D:/00_java/All_My_Project/yLabHW1/src/main/java/lesson04",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
@@ -79,12 +65,13 @@
       <recent name="org.example.homework2.Sequences" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java\lesson04" />
       <recent name="D:\00_java\All_My_Project\yLabHW1" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\resources" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MovieTest">
+  <component name="RunManager" selected="Application.PersistenceMapTest">
     <configuration name="DatedMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.homework3.dated.map.DatedMapTest" />
       <module name="yLabHW1" />
@@ -115,12 +102,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrgStructureParserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.homework3.org.structure.OrgStructureParserTest" />
+    <configuration name="PasswordValidatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.homework3.password.validator.PasswordValidatorTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.homework3.org.structure.*" />
+          <option name="PATTERN" value="org.example.homework3.password.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordValidatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.homework3.password.validator.PasswordValidatorTest" />
+    <configuration name="PersistenceMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson04.persistentmap.PersistenceMapTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.homework3.password.validator.*" />
+          <option name="PATTERN" value="lesson04.persistentmap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PersistenceMapTest" />
         <item itemvalue="Application.MovieTest" />
         <item itemvalue="Application.PasswordValidatorTest" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.DatedMapTest" />
-        <item itemvalue="Application.OrgStructureParserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679815468225</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="task #1 Movie Database completed!">
+      <created>1679844314744</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679844314744</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +261,18 @@
     <MESSAGE value="task #5 FileSort completed!" />
     <MESSAGE value="add lesson 4 package fron ylab" />
     <MESSAGE value="add lesson 4 package from ylab" />
-    <option name="LAST_COMMIT_MESSAGE" value="add lesson 4 package from ylab" />
+    <MESSAGE value="task #1 Movie Database completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="task #1 Movie Database completed!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lesson04/persistentmap/PersistentMapImpl.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
