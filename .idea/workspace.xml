@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="code refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/ApiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/ApiApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/PersonApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/PersonApiImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/db/DbApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/db/DbApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "D:/00_java/All_My_Project/yLabHW1/src/main/java/lesson04",
+    "last_opened_file_path": "D:/00_java/All_My_Project/yLabHW1/src/main/resources",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
@@ -67,9 +69,9 @@
       <recent name="org.example.homework2.Sequences" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\resources" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java\lesson04" />
       <recent name="D:\00_java\All_My_Project\yLabHW1" />
-      <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\resources" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -164,7 +166,8 @@
       <workItem from="1678095931867" duration="1098000" />
       <workItem from="1678097508854" duration="335000" />
       <workItem from="1678517911436" duration="18944000" />
-      <workItem from="1679958038600" duration="78567000" />
+      <workItem from="1679958038600" duration="82152000" />
+      <workItem from="1680109396693" duration="5654000" />
     </task>
     <task id="LOCAL-00001" summary="first commit&#10;add Stars, Pell, MultTable, Guess class">
       <created>1678096448032</created>
@@ -271,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680102174214</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="code refactoring">
+      <created>1680103644443</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680103644443</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

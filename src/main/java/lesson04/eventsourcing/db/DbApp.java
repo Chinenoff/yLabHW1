@@ -69,8 +69,13 @@ public class DbApp {
         PreparedStatement statement = connectionDb.prepareStatement(queryDelete)) {
       statement.setLong(1, idPerson);
       System.out.println(idPerson);
-      statement.executeUpdate();
+      int sqlResult = statement.executeUpdate();
+      if (sqlResult == 0) {
+        System.out.println("Ошибка удаления! Запись с id " +  idPerson + " отсутствует в базе.");
+      }
     } catch (SQLException e) {
+      System.out.println("SQL Error removal method");
+      e.printStackTrace();
       throw new RuntimeException(e); //нельзя удалить по ID
     }
   }

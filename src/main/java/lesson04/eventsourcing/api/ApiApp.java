@@ -16,7 +16,6 @@ public class ApiApp {
 
     ConnectionFactory factory = initMQ();
     DataSource dataSource = DbUtil.buildDataSource();
-    Random random = new Random();
     try (Connection connection = factory.newConnection();
         Channel channel = connection.createChannel()) {
       channel.queueDeclare(QUEUE_PERSON, false, false, false, null);
@@ -41,6 +40,11 @@ public class ApiApp {
       personApi.deletePerson(1111L);
       System.out.println(personApi.findPerson(6666L));
       System.out.println(personApi.findAll());
+      try {
+        Thread.sleep(20000);
+      } catch (InterruptedException ex) {
+      }
+      personApi.deletePerson(1111L);
 
     }
   }

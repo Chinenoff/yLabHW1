@@ -14,6 +14,7 @@ import javax.sql.DataSource;
 import lesson04.eventsourcing.Person;
 import lesson04.eventsourcing.RubbitMessage;
 
+
 /**
  * Тут пишем реализацию
  */
