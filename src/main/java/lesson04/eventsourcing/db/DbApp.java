@@ -28,24 +28,19 @@ public class DbApp {
     System.out.println(" [*] Waiting from QUEUE_PERSON. To exit press CTRL+C");
 
     DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-      //String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
-      RubbitMessage messageRybbit = new RubbitMessage(new String(delivery.getBody(), StandardCharsets.UTF_8));
+      RubbitMessage messageRybbit = new RubbitMessage(
+          new String(delivery.getBody(), StandardCharsets.UTF_8));
       System.out.println(" [x] Received '" + messageRybbit + "'");
       String metod = messageRybbit.getMetod();
       String message = messageRybbit.getMessage();
-      if (metod.equals("savePerson")){
+      if (metod.equals("savePerson")) {
         addPersonToDb(dataSource, parseJsonToPerson(message));
-        //System.out.println(metod);
-        //System.out.println(messageRybbit.getMessage());
       } else if (metod.equals("deletePerson")) {
         removePersonById(dataSource, Long.valueOf(message));
       }
-
     };
     channel.basicConsume(QUEUE_PERSON, true, deliverCallback, consumerTag -> {
     });
-
-    // тут пишем создание и запуск приложения работы с БД
   }
 
   private static void addPersonToDb(DataSource dataSource, Person person) {
@@ -68,15 +63,14 @@ public class DbApp {
     }
   }
 
-  private static void removePersonById(DataSource dataSource, Long idPerson){
+  private static void removePersonById(DataSource dataSource, Long idPerson) {
     String queryDelete = "DELETE FROM person WHERE id = ? ";
     try (java.sql.Connection connectionDb = dataSource.getConnection();
         PreparedStatement statement = connectionDb.prepareStatement(queryDelete)) {
-      //statement.setString(1, idPerson);
-      statement.setLong(1, idPerson );
+      statement.setLong(1, idPerson);
       System.out.println(idPerson);
       statement.executeUpdate();
-  } catch (SQLException e) {
+    } catch (SQLException e) {
       throw new RuntimeException(e); //нельзя удалить по ID
     }
   }

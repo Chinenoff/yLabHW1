@@ -9,7 +9,9 @@ import lesson04.DbUtil;
 import lesson04.RabbitMQUtil;
 
 public class ApiApp {
+
   private final static String QUEUE_PERSON = "queuePerson";
+
   public static void main(String[] args) throws Exception {
 
     ConnectionFactory factory = initMQ();
@@ -21,29 +23,33 @@ public class ApiApp {
       PersonApi personApi = new PersonApiImpl(channel, dataSource);
 
       personApi.savePerson(1111L, "Ivan", "Ivanov", "Ivanovich");
-      personApi.savePerson(2222L, "Ivanka", "Ivankovna", "Ivanovich");
+      personApi.savePerson(2222L, "Ivanka", "Trump", "Marie");
+      personApi.savePerson(3333L, "Keanu", "Reeves", "Charles");
+      personApi.savePerson(4444L, "Lara", "Croft", "Tomb Raider");
+      personApi.savePerson(5555L, "Thomas", "Cruise", "Mapother");
+      personApi.savePerson(6666L, "Monica", "Bellucci", "Anna Maria");
+
+      /*for (int i = 0; i < 10; i++) {
+        personApi.savePerson(random.nextLong(), generateBotName() , generateBotName(), generateBotName());
+      }*/
+
       try {
         Thread.sleep(20000);
-      } catch(InterruptedException ex) {}
-
-      personApi.deletePerson(1111L);
-      System.out.println(personApi.findPerson(2222L));
-
-      for (int i = 0; i < 10; i++) {
-        personApi.savePerson(random.nextLong(), generateBotName() , generateBotName(), generateBotName());
+      } catch (InterruptedException ex) {
       }
 
+      personApi.deletePerson(1111L);
+      System.out.println(personApi.findPerson(6666L));
+      System.out.println(personApi.findAll());
+
     }
-
-
-    // Тут пишем создание PersonApi, запуск и демонстрацию работы
   }
 
   private static ConnectionFactory initMQ() throws Exception {
     return RabbitMQUtil.buildConnectionFactory();
   }
 
-  private static String generateBotName (){
+  private static String generateBotName() {
     Random random = new Random();
     return "Person-" + random.nextInt();
   }
