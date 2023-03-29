@@ -5,94 +5,50 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
-import com.rabbitmq.client.GetResponse;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.concurrent.TimeoutException;
 import javax.sql.DataSource;
 import lesson04.DbUtil;
 import lesson04.RabbitMQUtil;
 import lesson04.eventsourcing.Person;
+import lesson04.eventsourcing.RubbitMessage;
 
 public class DbApp {
 
-  private final static String QUEUE_SAVE_PERSON = "queueSavePerson";
-  private final static String QUEUE_DELETE_PERSON = "queueDeletePerson";
+  private final static String QUEUE_PERSON = "queuePerson";
 
   public static void main(String[] args) throws Exception {
     DataSource dataSource = initDb();
-    ConnectionFactory connectionFactory = initMQ();
+    ConnectionFactory factory = initMQ();
 
-    queueProcessingSavePerson(connectionFactory, dataSource);
-    queueProcessingDeletePerson(connectionFactory, dataSource);
+    Connection connection = factory.newConnection();
+    Channel channel = connection.createChannel();
+    channel.queueDeclare(QUEUE_PERSON, false, false, false, null);
+    System.out.println(" [*] Waiting from QUEUE_PERSON. To exit press CTRL+C");
+
+    DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+      //String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
+      RubbitMessage messageRybbit = new RubbitMessage(new String(delivery.getBody(), StandardCharsets.UTF_8));
+      System.out.println(" [x] Received '" + messageRybbit + "'");
+      String metod = messageRybbit.getMetod();
+      String message = messageRybbit.getMessage();
+      if (metod.equals("savePerson")){
+        addPersonToDb(dataSource, parseJsonToPerson(message));
+        //System.out.println(metod);
+        //System.out.println(messageRybbit.getMessage());
+      } else if (metod.equals("deletePerson")) {
+        removePersonById(dataSource, Long.valueOf(message));
+      }
+
+    };
+    channel.basicConsume(QUEUE_PERSON, true, deliverCallback, consumerTag -> {
+    });
 
     // тут пишем создание и запуск приложения работы с БД
   }
 
-  private static void queueProcessingDeletePerson(ConnectionFactory connectionFactory,
-      DataSource dataSource)
-      throws IOException, TimeoutException {
-    Connection connection = connectionFactory.newConnection();
-
-    Channel channel = connection.createChannel();
-    channel.queueDeclare(QUEUE_DELETE_PERSON, false, false, false, null);
-    System.out.println(" [*] Waiting from QUEUE_DELETE_PERSON. To exit press CTRL+C");
-
-    DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-      String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
-      System.out.println(" [x] Received '" + message + "'");
-
-      deletePersonById(dataSource, message);
-    };
-    channel.basicConsume(QUEUE_DELETE_PERSON, true, deliverCallback, consumerTag -> {
-    });
-  }
-
-  private static void queueProcessingSavePerson(ConnectionFactory connectionFactory,
-      DataSource dataSource)
-      throws IOException, TimeoutException {
-
-    Connection connection = connectionFactory.newConnection();
-
-    Channel channel = connection.createChannel();
-    channel.queueDeclare(QUEUE_SAVE_PERSON, false, false, false, null);
-    System.out.println(" [*] Waiting from QUEUE_SAVE_PERSON. To exit press CTRL+C");
-
-    DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-      String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
-      System.out.println(" [x] Received '" + message + "'");
-      try {
-        addPersonToDb(dataSource, parseJsonToPerson(message));
-      } catch (SQLException e) {
-        throw new RuntimeException(e);
-      }
-    };
-    channel.basicConsume(QUEUE_SAVE_PERSON, true, deliverCallback, consumerTag -> {
-    });
-  }
-
-  private static Person parseJsonToPerson(String jsonString) {
-    Gson gson = new Gson();
-    return gson.fromJson(jsonString, Person.class);
-  }
-
-  private static void deletePersonById(DataSource dataSource, String idPerson) {
-    String sql = "DELETE FROM person WHERE id = ? ";
-    try (
-        java.sql.Connection connection = dataSource.getConnection();
-        PreparedStatement statement = connection.prepareStatement(sql)) {
-
-      statement.setString(1, idPerson);
-      System.out.println(idPerson);
-      statement.executeUpdate();
-    } catch (SQLException e) {
-      throw new RuntimeException(e);
-    }
-  }
-
-  private static void addPersonToDb(DataSource dataSource, Person person) throws SQLException {
+  private static void addPersonToDb(DataSource dataSource, Person person) {
     String queryInsert = "INSERT INTO person (id, first_name, last_name, middle_name) VALUES (?, ?, ?, ?)";
     try (java.sql.Connection connectionDb = dataSource.getConnection();
         PreparedStatement statement = connectionDb.prepareStatement(queryInsert)) {
@@ -107,7 +63,27 @@ public class DbApp {
       statement.setString(3, lastName);
       statement.setString(4, middleName);
       statement.executeUpdate();
+    } catch (SQLException e) {
+      throw new RuntimeException(e); //персон не может быть добавлен в БД
     }
+  }
+
+  private static void removePersonById(DataSource dataSource, Long idPerson){
+    String queryDelete = "DELETE FROM person WHERE id = ? ";
+    try (java.sql.Connection connectionDb = dataSource.getConnection();
+        PreparedStatement statement = connectionDb.prepareStatement(queryDelete)) {
+      //statement.setString(1, idPerson);
+      statement.setLong(1, idPerson );
+      System.out.println(idPerson);
+      statement.executeUpdate();
+  } catch (SQLException e) {
+      throw new RuntimeException(e); //нельзя удалить по ID
+    }
+  }
+
+  private static Person parseJsonToPerson(String jsonString) {
+    Gson gson = new Gson();
+    return gson.fromJson(jsonString, Person.class);
   }
 
   private static ConnectionFactory initMQ() throws Exception {
@@ -127,5 +103,4 @@ public class DbApp {
     DbUtil.applyDdl(ddl, dataSource);
     return dataSource;
   }
-
 }
