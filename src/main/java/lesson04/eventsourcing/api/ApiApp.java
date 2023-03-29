@@ -4,6 +4,8 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import java.util.Random;
+import javax.sql.DataSource;
+import lesson04.DbUtil;
 import lesson04.RabbitMQUtil;
 
 public class ApiApp {
@@ -11,23 +13,25 @@ public class ApiApp {
   public static void main(String[] args) throws Exception {
 
     ConnectionFactory factory = initMQ();
+    DataSource dataSource = DbUtil.buildDataSource();
     Random random = new Random();
     try (Connection connection = factory.newConnection();
         Channel channel = connection.createChannel()) {
       channel.queueDeclare(QUEUE_PERSON, false, false, false, null);
-      PersonApi personApi = new PersonApiImpl(channel);
+      PersonApi personApi = new PersonApiImpl(channel, dataSource);
 
       personApi.savePerson(1111L, "Ivan", "Ivanov", "Ivanovich");
       personApi.savePerson(2222L, "Ivanka", "Ivankovna", "Ivanovich");
       try {
-        Thread.sleep(60000);
+        Thread.sleep(20000);
       } catch(InterruptedException ex) {}
 
       personApi.deletePerson(1111L);
+      System.out.println(personApi.findPerson(2222L));
 
-      /*for (int i = 0; i < 10; i++) {
+      for (int i = 0; i < 10; i++) {
         personApi.savePerson(random.nextLong(), generateBotName() , generateBotName(), generateBotName());
-      }*/
+      }
 
     }
 

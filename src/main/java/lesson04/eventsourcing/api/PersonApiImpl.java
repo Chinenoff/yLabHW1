@@ -6,9 +6,13 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
+import javax.sql.DataSource;
 import lesson04.eventsourcing.Person;
 import lesson04.eventsourcing.RubbitMessage;
 
@@ -17,11 +21,18 @@ import lesson04.eventsourcing.RubbitMessage;
  */
 public class PersonApiImpl implements PersonApi {
   Channel channel;
+  DataSource dataSource;
   private final static String QUEUE_PERSON = "queuePerson";
+
+  public PersonApiImpl(Channel channel, DataSource dataSource) {
+    this.channel = channel;
+    this.dataSource = dataSource;
+  }
 
   public PersonApiImpl(Channel channel) {
     this.channel = channel;
   }
+
 
   @Override
   public void deletePerson(Long personId) {
@@ -50,7 +61,30 @@ public class PersonApiImpl implements PersonApi {
 
   @Override
   public Person findPerson(Long personId) {
-    return new Person();
+    String querySelectById = "SELECT * FROM person WHERE id = ? ";
+    Person person = null;
+    try (java.sql.Connection connectionDb = dataSource.getConnection();
+        PreparedStatement statement = connectionDb.prepareStatement(querySelectById)) {
+      statement.setLong(1, personId);
+      ResultSet resultSet = statement.executeQuery();
+      while (resultSet.next()) {
+
+        Long id = resultSet.getLong(1);
+        String name = resultSet.getString(2);
+        String lastName = resultSet.getString(3);
+        String middleName = resultSet.getString(4);
+
+        person = new Person(id, name, lastName, middleName);
+
+        //person.setId(resultSet.getLong(1));
+        //person.setName(resultSet.getString(2));
+        //person.setLastName(resultSet.getString(3));
+        //person.setMiddleName(resultSet.getString(4));
+      }
+    } catch (SQLException e) {
+      throw new RuntimeException(e); //нельзя найти по id
+    }
+    return person;
   }
 
   @Override
@@ -59,31 +93,9 @@ public class PersonApiImpl implements PersonApi {
     return personList;
   }
 
- /* private static void runRubbitQueue(ConnectionFactory connectionFactory){
-    try (Connection connection = connectionFactory.newConnection();
-        Channel channel = connection.createChannel()) {
-    } catch (IOException | TimeoutException e) {
-      throw new RuntimeException(e);
-    }
-  }*/
-
   private String parsePersonToJson(Person person) {
     Gson gson = new Gson();
     return gson.toJson(person);
   }
-
-  /*private static String createRubbitMessage(String metod, String message){
-    return message + ";" + message;
-  }
-
-  private static String getMetodFromRubbitMessage(String message){
-    String[] items = message.split(";");
-    return items[0];
-  }
-
-  private static String getMessageFromRubbitMessage(String message){
-    String[] items = message.split(";");
-    return items[1];
-  }*/
 
 }
