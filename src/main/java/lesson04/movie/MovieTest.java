@@ -1,20 +1,23 @@
 package lesson04.movie;
 
-import io.ylab.intensive.lesson04.DbUtil;
 import java.io.File;
 import java.sql.SQLException;
 import javax.sql.DataSource;
+import lesson04.DbUtil;
 
 public class MovieTest {
   public static void main(String[] args) throws SQLException {
     DataSource dataSource = initDb();
     MovieLoader movieLoader = new MovieLoaderImpl(dataSource);
 
-    File dataFile = new File("movies.csv");
+    File dataFile = new File("src/main/resources/film.csv");
     movieLoader.loadData(dataFile);
 
     /**
-     * Тут написать в комментариях запрос получения всех 
+     * Тут написать в комментариях запрос получения всех
+     * SELECT subject, count(*)
+     * FROM movie
+     * GROUP by subject;
      */
   }
 

@@ -16,6 +16,16 @@ public class Person {
     this.middleName = middleName;
   }
 
+  @Override
+  public String toString() {
+    return "Person{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", lastName='" + lastName + '\'' +
+        ", middleName='" + middleName + '\'' +
+        '}';
+  }
+
   public Long getId() {
     return id;
   }
