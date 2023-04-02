@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="code refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/DbUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/RubbitMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/api/ApiApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/api/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/api/PersonApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/api/PersonApiImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/db/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/db/DbApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/MessageFilterApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/SQLQueryBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/SQLQueryBuilderImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/SQLQueryExtenderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/ApiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/ApiApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/PersonApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/api/PersonApiImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/db/DbApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson04/eventsourcing/db/DbApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="featureHW4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "D:/00_java/All_My_Project/yLabHW1/src/main/resources",
+    "last_opened_file_path": "D:/00_java/All_My_Project/yLabHW1/src/main/java",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
@@ -63,23 +76,26 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="lesson05.sqlquerybuilder" />
       <recent name="org.example.homework3.org.structure" />
       <recent name="org.example.homework3.dated.map" />
       <recent name="org.example.homework3.transliterator" />
       <recent name="org.example.homework2.Sequences" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\resources" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java\lesson04" />
       <recent name="D:\00_java\All_My_Project\yLabHW1" />
-      <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lesson05.eventsourcing" />
+      <recent name="lesson05.eventsourcing.api" />
       <recent name="lesson04.eventsourcing.db" />
       <recent name="lesson04.filesort" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApiApp">
+  <component name="RunManager" selected="Application.SQLQueryExtenderTest">
     <configuration name="ApiApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson04.eventsourcing.api.ApiApp" />
       <module name="yLabHW1" />
@@ -106,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSorterTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson04.filesort.FileSorterTest" />
+    <configuration name="SQLQueryExtenderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson05.sqlquerybuilder.SQLQueryExtenderTest" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson04.filesort.*" />
+          <option name="PATTERN" value="lesson05.sqlquerybuilder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersistenceMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson04.persistentmap.PersistenceMapTest" />
+    <configuration name="lesson05.eventsourcing.api.ApiApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson05.eventsourcing.api.ApiApp" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson04.persistentmap.*" />
+          <option name="PATTERN" value="lesson05.eventsourcing.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,12 +148,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Send" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson04.Send" />
+    <configuration name="lesson05.eventsourcing.db.DbApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson05.eventsourcing.db.DbApp" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson04.*" />
+          <option name="PATTERN" value="lesson05.eventsourcing.db.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SQLQueryExtenderTest" />
+        <item itemvalue="Application.lesson05.eventsourcing.api.ApiApp" />
+        <item itemvalue="Application.lesson05.eventsourcing.db.DbApp" />
         <item itemvalue="Application.ApiApp" />
         <item itemvalue="Application.DbApp" />
-        <item itemvalue="Application.Send" />
-        <item itemvalue="Application.FileSorterTest" />
-        <item itemvalue="Application.PersistenceMapTest" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +183,8 @@
       <workItem from="1678097508854" duration="335000" />
       <workItem from="1678517911436" duration="18944000" />
       <workItem from="1679958038600" duration="82152000" />
-      <workItem from="1680109396693" duration="5654000" />
+      <workItem from="1680109396693" duration="11341000" />
+      <workItem from="1680348699318" duration="39468000" />
     </task>
     <task id="LOCAL-00001" summary="first commit&#10;add Stars, Pell, MultTable, Guess class">
       <created>1678096448032</created>
@@ -281,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680103644443</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="code refactoring">
+      <created>1680116612721</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680116612721</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

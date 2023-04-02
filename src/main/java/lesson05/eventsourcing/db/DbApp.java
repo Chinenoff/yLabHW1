@@ -1,4 +1,4 @@
-package lesson04.eventsourcing.db;
+package lesson05.eventsourcing.db;
 
 import com.google.gson.Gson;
 import com.rabbitmq.client.Channel;
@@ -9,18 +9,21 @@ import java.nio.charset.StandardCharsets;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.sql.DataSource;
-import lesson04.DbUtil;
-import lesson04.RabbitMQUtil;
-import lesson04.eventsourcing.Person;
-import lesson04.eventsourcing.RubbitMessage;
+import lesson05.eventsourcing.RubbitMessage;
+import lesson05.eventsourcing.Person;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class DbApp {
 
   private final static String QUEUE_PERSON = "queuePerson";
 
   public static void main(String[] args) throws Exception {
-    DataSource dataSource = initDb();
-    ConnectionFactory factory = initMQ();
+    AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
+        Config.class);
+    applicationContext.start();
+    // тут пишем создание и запуск приложения работы с БД
+    DataSource dataSource = applicationContext.getBean(DataSource.class);
+    ConnectionFactory factory = applicationContext.getBean(ConnectionFactory.class);
 
     Connection connection = factory.newConnection();
     Channel channel = connection.createChannel();
@@ -41,6 +44,7 @@ public class DbApp {
     };
     channel.basicConsume(QUEUE_PERSON, true, deliverCallback, consumerTag -> {
     });
+
   }
 
   private static void addPersonToDb(DataSource dataSource, Person person) {
@@ -60,7 +64,7 @@ public class DbApp {
       statement.setString(4, middleName);
       statement.executeUpdate();
     } catch (SQLException e) {
-      throw new RuntimeException(e); //персон не может быть добавлен в БД
+      throw new RuntimeException(e);
     }
   }
 
@@ -72,12 +76,12 @@ public class DbApp {
       System.out.println(idPerson);
       int sqlResult = statement.executeUpdate();
       if (sqlResult == 0) {
-        System.out.println("Ошибка удаления! Запись с id " +  idPerson + " отсутствует в базе.");
+        System.out.println("Ошибка удаления! Запись с id " + idPerson + " отсутствует в базе.");
       }
     } catch (SQLException e) {
       System.out.println("SQL Error removal method");
       e.printStackTrace();
-      throw new RuntimeException(e); //нельзя удалить по ID
+      throw new RuntimeException(e);
     }
   }
 
@@ -86,22 +90,4 @@ public class DbApp {
     return gson.fromJson(jsonString, Person.class);
   }
 
-  private static ConnectionFactory initMQ() throws Exception {
-    return RabbitMQUtil.buildConnectionFactory();
-  }
-
-  private static DataSource initDb() throws SQLException {
-    String ddl = ""
-        + "drop table if exists person;"
-        + "create table if not exists person (\n"
-        + "id bigint primary key,\n"
-        + "first_name varchar,\n"
-        + "last_name varchar,\n"
-        + "middle_name varchar\n"
-        + ")";
-    DataSource dataSource = DbUtil.buildDataSource();
-    DbUtil.applyDdl(ddl, dataSource);
-    return dataSource;
-  }
 }
-
