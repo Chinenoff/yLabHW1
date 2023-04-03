@@ -2,11 +2,9 @@ package lesson05.sqlquerybuilder;
 
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.sql.DataSource;
 
 public class SQLQueryBuilderImpl implements SQLQueryBuilder {
 

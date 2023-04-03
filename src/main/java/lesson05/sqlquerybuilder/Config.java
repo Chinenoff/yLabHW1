@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("lesson05.sqlquerybuilder")
 public class Config {
-  
+
   @Bean
   public DataSource dataSource() {
     PGSimpleDataSource dataSource = new PGSimpleDataSource();
@@ -28,6 +28,7 @@ public class Config {
   public Connection connection() throws SQLException {
     return dataSource().getConnection();
   }
+
   @Bean
   public DatabaseMetaData metaData() throws SQLException {
     return connection().getMetaData();
