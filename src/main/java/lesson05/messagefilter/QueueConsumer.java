@@ -6,65 +6,65 @@ import com.rabbitmq.client.Consumer;
 import com.rabbitmq.client.Envelope;
 import com.rabbitmq.client.ShutdownSignalException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.concurrent.TimeoutException;
+import java.util.stream.Collectors;
 import org.apache.commons.lang.SerializationUtils;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class QueueConsumer extends EndPoint implements Runnable, Consumer {
+
+  CensorMessageHandler messageHandler;
   Producer producer;
 
-
-  public QueueConsumer(String endPointName, ConnectionFactory factory, Producer producer)
+  public QueueConsumer(String endPointName, ConnectionFactory factory,
+      CensorMessageHandler messageHandler, Producer producer)
       throws IOException, TimeoutException {
-    super(endPointName, factory, producer);
+    super(endPointName, factory);
+    this.messageHandler = messageHandler;
+    this.producer = producer;
   }
 
   public void run() {
     try {
-      //start consuming messages. Auto acknowledge messages.
-      channel.basicConsume(endPointName, true,this);
+      channel.basicConsume(endPointName, true, this);
       AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
           Config.class);
       applicationContext.start();
-      producer = applicationContext.getBean(Producer.class);
     } catch (IOException e) {
       e.printStackTrace();
     }
   }
 
-  /**
-   * Called when consumer is registered.
-   */
   public void handleConsumeOk(String consumerTag) {
-    System.out.println("Consumer "+consumerTag +" registered");
+    System.out.println("Consumer " + consumerTag + " registered");
   }
 
-  /**
-   * Called when new message is available.
-   */
   @Override
   public void handleDelivery(String s, Envelope envelope, AMQP.BasicProperties basicProperties,
       byte[] bytes) throws IOException {
-    //Map map = (HashMap) SerializationUtils.deserialize(bytes);
     String receivedMessage = (String) SerializationUtils.deserialize(bytes);
-    System.out.println("Message: "+ receivedMessage + " was received.");
-    producer.sendMessage(receivedMessage);
+    System.out.printf("Message: %s was received.%n", receivedMessage);
+
+    String censoredMessage = Arrays.stream(
+            receivedMessage.split("(?<=\\p{Punct}|\\s)|(?=\\p{Punct}|\\s)"))
+        .map(word -> messageHandler.containsWord(word) ? messageHandler.replaceMiddleWithAsterisk(
+            word) : word)
+        .collect(Collectors.joining());
+    System.out.println(censoredMessage); //для проверки отправляемого сообщения
+
+    producer.sendMessage(censoredMessage);
   }
 
-  /*public String sendMessage(Serializable object) throws IOException {
-    channel.basicPublish("",endPointName, null, SerializationUtils.serialize(object));
-  }*/
-
- /* public String getNonCensorMessage() {
-    return nonCensorMessage;
+  public void handleCancel(String consumerTag) {
   }
 
-  public void setNonCensorMessage(String nonCensorMessage) {
-    this.nonCensorMessage = nonCensorMessage;
-  }*/
+  public void handleCancelOk(String consumerTag) {
+  }
 
-  public void handleCancel(String consumerTag) {}
-  public void handleCancelOk(String consumerTag) {}
-  public void handleRecoverOk(String consumerTag) {}
-  public void handleShutdownSignal(String consumerTag, ShutdownSignalException arg1) {}
+  public void handleRecoverOk(String consumerTag) {
+  }
+
+  public void handleShutdownSignal(String consumerTag, ShutdownSignalException arg1) {
+  }
 }

@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task 1 and 2 completed!">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/censor_ok.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/EndPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Producer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java" afterDir="false" />
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task 3 does not work. needs improvement!!!">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/CensorMessageHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/TestProducerSendTestMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/EndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/EndPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/MessageFilterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/MessageFilterApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/SQLQueryBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/SQLQueryBuilderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "D:/00_java/All_My_Project/yLabHW1/src/main/java/lesson05",
+    "last_opened_file_path": "D:/00_java/All_My_Project/yLabHW1/src/main/java/lesson05/messagefilter",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
@@ -75,20 +73,21 @@
       <recent name="org.example.homework2.Sequences" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java\lesson05\messagefilter" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java\lesson05" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\resources" />
       <recent name="D:\00_java\All_My_Project\yLabHW1\src\main\java\lesson04" />
-      <recent name="D:\00_java\All_My_Project\yLabHW1" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lesson05.messagefilter" />
       <recent name="lesson05.eventsourcing" />
       <recent name="lesson05.eventsourcing.api" />
       <recent name="lesson04.eventsourcing.db" />
       <recent name="lesson04.filesort" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MessageFilterApp">
+  <component name="RunManager" selected="Application.TestProducerSendTestMessage">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson05.messagefilter.Main" />
       <module name="yLabHW1" />
@@ -128,8 +127,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson05.messagefilter.TestProducer" />
+    <configuration name="TestProducerSendTestMessage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson05.messagefilter.TestProducerSendTestMessage" />
       <module name="yLabHW1" />
       <extension name="coverage">
         <pattern>
@@ -156,8 +155,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestProducerSendTestMessage" />
         <item itemvalue="Application.MessageFilterApp" />
-        <item itemvalue="Application.TestProducer" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.lesson05.eventsourcing.db.DbApp" />
         <item itemvalue="Application.SQLQueryExtenderTest" />
@@ -177,7 +176,7 @@
       <workItem from="1678517911436" duration="18944000" />
       <workItem from="1679958038600" duration="82152000" />
       <workItem from="1680109396693" duration="11341000" />
-      <workItem from="1680348699318" duration="77287000" />
+      <workItem from="1680348699318" duration="98649000" />
     </task>
     <task id="LOCAL-00001" summary="first commit&#10;add Stars, Pell, MultTable, Guess class">
       <created>1678096448032</created>
@@ -305,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680454041256</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="task 3 does not work. needs improvement!!!">
+      <created>1680537696288</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1680537696288</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +345,8 @@
     <MESSAGE value="task #4 Приложение API completed!" />
     <MESSAGE value="code refactoring" />
     <MESSAGE value="task 1 and 2 completed!" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 1 and 2 completed!" />
+    <MESSAGE value="task 3 does not work. needs improvement!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 3 does not work. needs improvement!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -348,25 +355,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/lesson04/persistentmap/PersistentMapImpl.java</url>
           <line>24</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java</url>
-          <line>45</line>
-          <properties class="lesson05.messagefilter.QueueConsumer" method="handleDelivery">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

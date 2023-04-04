@@ -6,13 +6,14 @@ import java.io.Serializable;
 import java.util.concurrent.TimeoutException;
 import org.apache.commons.lang.SerializationUtils;
 
-public class Producer extends EndPoint{
+public class Producer extends EndPoint {
 
-  public Producer(String endPointName, ConnectionFactory factory) throws IOException, TimeoutException {
+  public Producer(String endPointName, ConnectionFactory factory)
+      throws IOException, TimeoutException {
     super(endPointName, factory);
   }
 
   public void sendMessage(Serializable object) throws IOException {
-    channel.basicPublish("",endPointName, null, SerializationUtils.serialize(object));
+    channel.basicPublish("", endPointName, null, SerializationUtils.serialize(object));
   }
 }
