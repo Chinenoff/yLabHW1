@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="task 3 does not work. needs improvement!!!">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/CensorMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/TestProducerSendTestMessage.java" afterDir="false" />
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="Task #3 completed!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/EndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/EndPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/MessageFilterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/MessageFilterApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/db/DbApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/db/DbApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +82,7 @@
       <recent name="lesson04.filesort" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestProducerSendTestMessage">
+  <component name="RunManager" selected="Application.MessageFilterApp">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson05.messagefilter.Main" />
       <module name="yLabHW1" />
@@ -155,8 +150,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestProducerSendTestMessage" />
         <item itemvalue="Application.MessageFilterApp" />
+        <item itemvalue="Application.TestProducerSendTestMessage" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.lesson05.eventsourcing.db.DbApp" />
         <item itemvalue="Application.SQLQueryExtenderTest" />
@@ -176,7 +171,7 @@
       <workItem from="1678517911436" duration="18944000" />
       <workItem from="1679958038600" duration="82152000" />
       <workItem from="1680109396693" duration="11341000" />
-      <workItem from="1680348699318" duration="98649000" />
+      <workItem from="1680348699318" duration="102727000" />
     </task>
     <task id="LOCAL-00001" summary="first commit&#10;add Stars, Pell, MultTable, Guess class">
       <created>1678096448032</created>
@@ -311,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680537696288</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Task #3 completed!!!">
+      <created>1680610982612</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1680610982613</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +348,8 @@
     <MESSAGE value="code refactoring" />
     <MESSAGE value="task 1 and 2 completed!" />
     <MESSAGE value="task 3 does not work. needs improvement!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 3 does not work. needs improvement!!!" />
+    <MESSAGE value="Task #3 completed!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task #3 completed!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

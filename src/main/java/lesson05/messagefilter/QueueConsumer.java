@@ -37,7 +37,7 @@ public class QueueConsumer extends EndPoint implements Runnable, Consumer {
   }
 
   public void handleConsumeOk(String consumerTag) {
-    System.out.println("Consumer " + consumerTag + " registered");
+    System.out.println(" [*] Waiting messages from INPUT queue. To exit press CTRL+C");
   }
 
   @Override
@@ -53,7 +53,7 @@ public class QueueConsumer extends EndPoint implements Runnable, Consumer {
         .collect(Collectors.joining());
     System.out.println(censoredMessage); //для проверки отправляемого сообщения
 
-    producer.sendMessage(censoredMessage);
+    producer.sendMessage("CensoredMessage: " + censoredMessage);
   }
 
   public void handleCancel(String consumerTag) {

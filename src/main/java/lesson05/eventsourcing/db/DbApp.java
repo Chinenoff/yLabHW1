@@ -14,7 +14,6 @@ import lesson05.eventsourcing.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class DbApp {
-
   private final static String QUEUE_PERSON = "queuePerson";
 
   public static void main(String[] args) throws Exception {
@@ -44,7 +43,6 @@ public class DbApp {
     };
     channel.basicConsume(QUEUE_PERSON, true, deliverCallback, consumerTag -> {
     });
-
   }
 
   private static void addPersonToDb(DataSource dataSource, Person person) {
