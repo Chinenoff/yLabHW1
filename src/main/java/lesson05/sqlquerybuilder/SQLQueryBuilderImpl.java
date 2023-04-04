@@ -45,11 +45,4 @@ public class SQLQueryBuilderImpl implements SQLQueryBuilder {
     return tables;
   }
 
-    /*ResultSet result = databaseMetaData.getTables(null, null, "%", null);
-    List<String> tables = new ArrayList<String>();
-    while(result.next()) {
-      tables.add(result.getString(2) + "." + result.getString(3));
-    }
-    return tables;
-  }*/
 }

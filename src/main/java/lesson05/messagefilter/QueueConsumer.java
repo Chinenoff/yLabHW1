@@ -51,9 +51,9 @@ public class QueueConsumer extends EndPoint implements Runnable, Consumer {
         .map(word -> messageHandler.containsWord(word) ? messageHandler.replaceMiddleWithAsterisk(
             word) : word)
         .collect(Collectors.joining());
-    System.out.println(censoredMessage); //для проверки отправляемого сообщения
+    System.out.println("CensoredMessage: " +  censoredMessage); //для проверки отправляемого сообщения
 
-    producer.sendMessage("CensoredMessage: " + censoredMessage);
+    producer.sendMessage(censoredMessage);
   }
 
   public void handleCancel(String consumerTag) {

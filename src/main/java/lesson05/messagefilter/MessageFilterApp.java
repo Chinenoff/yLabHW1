@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.sql.DataSource;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -12,6 +14,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MessageFilterApp {
 
   private final static String FILE_NAME = "src/main/java/lesson05/censor_ok.txt";
+  private final static String TABLE_OF_OBSCENE_WORDS = "censor";
 
   public static void main(String[] args) throws SQLException, IOException {
     AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
@@ -27,6 +30,9 @@ public class MessageFilterApp {
 
   private static void readCensorFile(DataSource dataSource) throws SQLException {
     Connection connection = dataSource.getConnection();
+    if (!tableExists(connection, TABLE_OF_OBSCENE_WORDS)){
+      connection.createStatement().executeUpdate("create table censor ( uncensored_word VARCHAR(255))");
+    }
     String sql = "INSERT INTO censor (uncensored_word) VALUES (?)";
 
     try (PreparedStatement statement = connection.prepareStatement(sql);
@@ -45,6 +51,13 @@ public class MessageFilterApp {
     } catch (IOException | SQLException ex) {
       ex.printStackTrace();
     }
+  }
+
+  private static boolean tableExists(Connection connection, String tableName) throws SQLException {
+    DatabaseMetaData meta = connection.getMetaData();
+    ResultSet resultSet = meta.getTables(null, null, tableName, new String[] {"TABLE"});
+
+    return resultSet.next();
   }
 
 

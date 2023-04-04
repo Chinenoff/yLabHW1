@@ -3,24 +3,22 @@ package lesson05.eventsourcing.api;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import javax.sql.DataSource;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ApiApp {
   private final static String QUEUE_PERSON = "queuePerson";
 
   public static void main(String[] args) throws Exception {
-    // Тут пишем создание PersonApi, запуск и демонстрацию работы
+
     AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
     applicationContext.start();
     PersonApi personApi = applicationContext.getBean(PersonApi.class);
-    DataSource dataSource = applicationContext.getBean(DataSource.class);
     ConnectionFactory factory = applicationContext.getBean(ConnectionFactory.class);
-    // пишем взаимодействие с PersonApi
     try (Connection connection = factory.newConnection();
         Channel channel = connection.createChannel()){
       channel.queueDeclare(QUEUE_PERSON, false, false, false, null);
 
+      //Test
       personApi.savePerson(1111L, "Ivan", "Ivanov", "Ivanovich");
       personApi.savePerson(2222L, "Ivanka", "Trump", "Marie");
       personApi.savePerson(3333L, "Keanu", "Reeves", "Charles");
@@ -36,7 +34,6 @@ public class ApiApp {
         Thread.sleep(20000);
       } catch (InterruptedException ex) {
       }
-
       personApi.deletePerson(1111L);
       System.out.println(personApi.findPerson(6666L));
       System.out.println(personApi.findAll());
