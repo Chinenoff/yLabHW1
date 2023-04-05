@@ -8,6 +8,7 @@ import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.sql.DataSource;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -32,6 +33,9 @@ public class MessageFilterApp {
     Connection connection = dataSource.getConnection();
     if (!tableExists(connection, TABLE_OF_OBSCENE_WORDS)){
       connection.createStatement().executeUpdate("create table censor ( uncensored_word VARCHAR(255))");
+      System.out.println ("table [" + TABLE_OF_OBSCENE_WORDS + "] has been created ");
+    } else {
+      cleanseTable(connection, TABLE_OF_OBSCENE_WORDS);
     }
     String sql = "INSERT INTO censor (uncensored_word) VALUES (?)";
 
@@ -48,6 +52,7 @@ public class MessageFilterApp {
           statement.executeBatch();
         }
       }
+      System.out.println ("data added to table: " + TABLE_OF_OBSCENE_WORDS);
     } catch (IOException | SQLException ex) {
       ex.printStackTrace();
     }
@@ -56,8 +61,17 @@ public class MessageFilterApp {
   private static boolean tableExists(Connection connection, String tableName) throws SQLException {
     DatabaseMetaData meta = connection.getMetaData();
     ResultSet resultSet = meta.getTables(null, null, tableName, new String[] {"TABLE"});
+    Boolean resultTableExists = resultSet.next();
+    System.out.println ("check if the table [" + tableName + "] exists. Result: " + resultTableExists);
+    return resultTableExists;
+  }
 
-    return resultSet.next();
+  public static void cleanseTable (Connection connection, String tableName) {
+    try {
+      Statement stmt = connection.createStatement ();
+      stmt.execute ("truncate table " + tableName);
+      System.out.println ("cleanseTable [" + tableName + "] executed successfully.");
+    } catch (Exception e) { e.printStackTrace(); }
   }
 
 

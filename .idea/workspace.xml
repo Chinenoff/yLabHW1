@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="Task #3 completed!!! (easy refactoring)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/MessageFilterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/MessageFilterApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +170,7 @@
       <workItem from="1678517911436" duration="18944000" />
       <workItem from="1679958038600" duration="82152000" />
       <workItem from="1680109396693" duration="11341000" />
-      <workItem from="1680348699318" duration="111659000" />
+      <workItem from="1680348699318" duration="114745000" />
     </task>
     <task id="LOCAL-00001" summary="first commit&#10;add Stars, Pell, MultTable, Guess class">
       <created>1678096448032</created>
@@ -332,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680676856814</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Task #3 completed!!! (easy refactoring)">
+      <created>1680679953108</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1680679953108</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
