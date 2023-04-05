@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="Task #3 completed!!!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/api/ApiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/api/ApiApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/db/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/eventsourcing/db/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/MessageFilterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/MessageFilterApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/QueueConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/TestProducerSendTestMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/messagefilter/TestProducerSendTestMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/SQLQueryBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/SQLQueryBuilderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/SQLQueryExtenderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson05/sqlquerybuilder/SQLQueryExtenderTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="0c6e6f72-3ef3-4d59-8d78-368eb74c495e" name="Changes" comment="Task #3 completed!!! (easy refactoring)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +167,7 @@
       <workItem from="1678517911436" duration="18944000" />
       <workItem from="1679958038600" duration="82152000" />
       <workItem from="1680109396693" duration="11341000" />
-      <workItem from="1680348699318" duration="110131000" />
+      <workItem from="1680348699318" duration="110818000" />
     </task>
     <task id="LOCAL-00001" summary="first commit&#10;add Stars, Pell, MultTable, Guess class">
       <created>1678096448032</created>
@@ -325,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680615834140</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Task #3 completed!!! (easy refactoring)">
+      <created>1680645473478</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1680645473478</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +359,8 @@
     <MESSAGE value="task 1 and 2 completed!" />
     <MESSAGE value="task 3 does not work. needs improvement!!!" />
     <MESSAGE value="Task #3 completed!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task #3 completed!!!" />
+    <MESSAGE value="Task #3 completed!!! (easy refactoring)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task #3 completed!!! (easy refactoring)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
